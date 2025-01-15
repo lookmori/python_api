@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('question')
-export class Question {
+export class QuesEntity {
   @PrimaryGeneratedColumn()
   id: number;
   @Column({ type: 'tinytext' })
