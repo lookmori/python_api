@@ -1,4 +1,5 @@
-import { Context, Controller, Inject } from "@midwayjs/core";
+import { Context, Controller, Inject } from '@midwayjs/core';
+import { QuestionService } from '../service/question.service';
 
 @Controller('/question')
 export class Question {

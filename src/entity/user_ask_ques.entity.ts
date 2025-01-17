@@ -1,4 +1,4 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 export enum AnsStatus {
   FINALL = '1',
@@ -7,7 +7,7 @@ export enum AnsStatus {
 }
 @Entity('user_ask_ques')
 export class UserAskQues {
-  @Column()
+  @PrimaryGeneratedColumn()
   ques_id: string;
   @Column()
   user_id: string;
@@ -19,5 +19,5 @@ export class UserAskQues {
     enum: AnsStatus,
   })
   ans_status: string;
-  question_name: string | FindOperator<string>;
+  question_name: string;
 }

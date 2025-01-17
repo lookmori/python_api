@@ -3,7 +3,7 @@ import * as koa from '@midwayjs/koa';
 import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
 import { join } from 'path';
-
+import * as crossDomain from '@midwayjs/cross-domain';
 import * as orm from '@midwayjs/typeorm';
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
@@ -14,6 +14,7 @@ import { ReportMiddleware } from './middleware/report.middleware';
     koa,
     validate,
     orm,
+    crossDomain,
     {
       component: info,
       enabledEnvironment: ['local'],

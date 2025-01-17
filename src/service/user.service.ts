@@ -17,12 +17,14 @@ export class UserService {
         code: 200,
         data: { ...userResult[0] },
         message: '登录成功',
+        status: 'success',
       };
     }
     return {
       code: 400,
       data: {},
       message: '未查询到用户，请先注册',
+      status: 'error',
     };
   }
 
@@ -37,6 +39,7 @@ export class UserService {
         code: 400,
         data: {},
         message: '账号已存在',
+        status: 'success',
       };
     }
     const user_item = new UserEntity();
@@ -50,12 +53,14 @@ export class UserService {
         code: 200,
         data: { ...insertUseResult },
         message: '注册成功',
+        status: 'success',
       };
     }
     return {
       code: 500,
       data: {},
       message: '服务器异常',
+      status: 'error',
     };
   }
 }

@@ -1,6 +1,5 @@
 import { Provide } from '@midwayjs/core';
 import { InjectEntityModel } from '@midwayjs/typeorm';
-import { UserAskQues } from '../entity/user_ask_ques.entity';
 import { Repository } from 'typeorm';
 import { QuesEntity } from '../entity/question.entity';
 import { Question } from '../interface';
