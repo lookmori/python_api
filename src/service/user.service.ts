@@ -4,6 +4,8 @@ import { InjectEntityModel } from '@midwayjs/typeorm';
 import { UserEntity } from '../entity/user.entity';
 import { Repository } from 'typeorm';
 
+// send mail with defined transport object
+
 @Provide()
 export class UserService {
   @InjectEntityModel(UserEntity)
@@ -33,7 +35,6 @@ export class UserService {
     const userResult = await this.userModel.find({
       where: { user_name: options.user_name },
     });
-    console.log(userResult);
     if (userResult.length) {
       return {
         code: 400,
@@ -62,5 +63,9 @@ export class UserService {
       message: '服务器异常',
       status: 'error',
     };
+  }
+
+  async SendEmailCode(options: any) {
+    // return sendResult;
   }
 }
